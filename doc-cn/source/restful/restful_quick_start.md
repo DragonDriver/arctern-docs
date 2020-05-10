@@ -33,6 +33,14 @@
 
 下述示例中假设服务器 IP 地址为`127.0.0.1`，Restful服务端口为`8080`，数据文件所在路径为 `/example/data/0_2M_nyc_taxi_and_building.csv`。
 
+### 安装依赖
+
+本文示例代码使用 python 的 `requests` 库调用 `Arctern Restful API`，使用下面的命令安装 `requests`：
+
+```shell
+pip install requests
+```
+
 ## API调用
 
 ### 创建作用域
@@ -479,9 +487,9 @@ eog /tmp/pointmap.png
 
 ![图标图icon_viz](../../../img/restful-result/icon_viz.png)
 
-### 鱼网图
+### 渔网图
 
-使用 `/fishnetmap` 接口根据乘客上车地点绘制鱼网图，使用总费用作为鱼网网格的权重，总费用越高，权重越大，鱼网网格的颜色越深。鱼网图中具体参数说明请参见 [鱼网图 Restful API 说明](./api/function/fishnetmap.html)。
+使用 `/fishnetmap` 接口根据乘客上车地点绘制渔网图，使用总费用作为渔网网格的权重，总费用越高，权重越大，渔网网格的颜色越深。渔网图中具体参数说明请参见 [渔网图 Restful API 说明](./api/function/fishnetmap.html)。
 
 ```python
 >>> import requests
@@ -519,9 +527,9 @@ eog /tmp/pointmap.png
 >>>     f.write(base64.b64decode(r.json()['result']))
 ```
 
-鱼网图样例：
+渔网图样例：
 
-![鱼网图fishnetmap](../../../img/restful-result/fishnetmap.png)
+![渔网图fishnetmap](../../../img/restful-result/fishnetmap.png)
 
 ### 删除作用域
 
