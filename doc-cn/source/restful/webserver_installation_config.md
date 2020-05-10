@@ -62,6 +62,8 @@ python setup.py install
 
 ### 基于源码的安装
 
+运行以下命令安装 Arctern Restful Server：
+
 ```bash
 # 下载源码
 git clone https://github.com/zilliztech/arctern.git
@@ -75,7 +77,7 @@ pip install -r requirements.txt
 
 ### 基于 PIP 的安装
 
-运行以下命令安装 Arctern Restful Server。
+运行以下命令安装 Arctern Restful Server：
 
 ```bash
 pip install arctern_server
