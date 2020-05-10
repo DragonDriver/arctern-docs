@@ -67,7 +67,7 @@ python setup.py install
 git clone https://github.com/zilliztech/arctern.git
 # 切换分支
 cd arctern
-git checkout branch-0.1.x
+git checkout master
 # 安装依赖
 cd gui/server/arctern_server
 pip install -r requirements.txt
