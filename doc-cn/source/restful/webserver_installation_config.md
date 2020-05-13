@@ -8,7 +8,7 @@ Arctern 提供基于 RESTful 接口的 Web 服务。通过配置可将 RESTful S
 
 ## 安装准备
 
-在安装 Arctern RESTful Server 前请预先安装 MiniConda Python3。以下内容假设在 MiniConda 安装完成后进行。
+在安装 Arctern RESTful Server 前请预先安装 Miniconda Python3，Miniconda 的安装可参考 [Linux 系统安装 Miniconda](https://docs.conda.io/projects/conda/en/latest/user-guide/install/linux.html)。以下内容假设在 Miniconda 安装完成后进行。
 
 ### 安装依赖库
 
@@ -60,6 +60,7 @@ tar zxvf spark-3.0.0-preview2-bin-hadoop2.7.tgz
 进入解压后产生的 `spark-3.0.0-preview2-bin-hadoop2.7` 目录，执行如下命令安装 PySpark：
 
 ```bash
+cd spark-3.0.0-preview2-bin-hadoop2.7
 cd python
 python setup.py install
 ```
