@@ -52,6 +52,13 @@ $ cp spark-defaults.conf.template spark-defaults.conf
 $ cp spark-env.sh.template spark-env.sh
 ```
 
+创建 **hive-site.xml** 文件：
+
+```bash
+$ cd spark-3.0.0-bin-hadoop2.7/conf
+$ touch hive-site.xml
+```
+
 在文件 spark-defaults.conf 的最后添加以下内容：
 
 > **注意：** 你需要将 `<conda_prefix>` 替换为本地 Conda 环境的安装路径。如何获取 conda 环境的安装路径请参考本文档末尾的 [FAQ](#FAQ) 部分。
@@ -68,6 +75,18 @@ spark.executor.extraClassPath <conda_prefix>/jars/arctern_scala-assembly-0.3.0.j
 
 ```bash
 $ export PYSPARK_PYTHON=<conda_prefix>/bin/python
+```
+
+在文件 **hive-site.xml** 中添加如下内容：
+
+```xml
+<configuration>
+    <property>
+        <name>hive.metastore.warehouse.dir</name>
+        <value>${user.home}/hive/warehouse</value>
+        <description>location of default database for the warehouse</description>
+    </property>
+</configuration>
 ```
 
 ### 编译安装 pyspark 包
